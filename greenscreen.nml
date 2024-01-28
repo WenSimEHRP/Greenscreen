@@ -1,0 +1,204 @@
+grf {
+    grfid: "GREN";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    version: 1; //first version
+    min_compatible_version: 1;
+    url: string(STR_URL);
+}
+
+template template_tracks(a) {
+    [1,1,64,31,0,0]
+}
+
+
+
+//template template_stations_x(a) {
+//
+//}
+//
+//template template_stations_y(a) {
+//
+//}
+
+spriteset (spriteset_obj_green, "gfx/empty.png") {
+    [0,0,1,1,0,0]
+}
+
+alternative_sprites (spriteset_obj_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green.png") {
+    [1,1,64,31,-31,0]
+}
+
+//alternative_sprites (spriteset_obj_green, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx/green2x.png") {
+//    [1,1,64,31,-31,0]
+//}
+
+alternative_sprites (spriteset_obj_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/green4x.png") {
+    [4,4,256,127,-123,0]        
+}
+
+spritelayout spritelayout_obj_green {
+    ground {
+        sprite: GROUNDSPRITE_CLEARED;
+    }
+    building {
+        sprite: spriteset_obj_green;
+    }
+}
+item (FEAT_OBJECTS, obj_greenscreen) {
+    property {
+        class:                  "GRSC";
+        classname:              string(STR_GRF_NAME);
+        name:                   string(STR_GRF_NAME);
+        climates_available:     ALL_CLIMATES;
+        size:                   [1,1];
+        build_cost_multiplier:  0;
+        remove_cost_multiplier: 0;
+        introduction_date:      date(0,1,1);
+        end_of_life_date:       0xFFFFFFFF;
+        object_flags:           bitmask();
+        height:                 0;
+        num_views:              1;
+        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE);
+        //OBJ_FLAG_NO_FOUNDATIONS
+    }
+    graphics {
+		default: 			spritelayout_obj_green;
+    }
+}
+
+spriteset (spriteset_obj_blue, "gfx/empty.png") {
+    [0,0,1,1,0,0]
+}
+
+alternative_sprites (spriteset_obj_blue, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/blue.png") {
+    [1,1,64,31,-31,0]
+}
+spritelayout spritelayout_obj_blue {
+    ground {
+        sprite: GROUNDSPRITE_CLEARED;
+    }
+    building {
+        sprite: spriteset_obj_blue;
+        xextent: 0;
+        yextent: 0;
+        zextent: 0;
+    }
+}
+
+item (FEAT_OBJECTS, obj_bluescreen) {
+    property {
+        class:                  "GRSC";
+        classname:              string(STR_GRF_NAME);
+        name:                   string(STR_BLUE);
+        climates_available:     ALL_CLIMATES;
+        size:                   [1,1];
+        build_cost_multiplier:  0;
+        remove_cost_multiplier: 0;
+        introduction_date:      date(0,1,1);
+        end_of_life_date:       0xFFFFFFFF;
+        object_flags:           bitmask();
+        height:                 0;
+        num_views:              1;
+        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE);
+        //OBJ_FLAG_NO_FOUNDATIONS
+    }
+    graphics {
+		default: 			spritelayout_obj_blue;
+    }
+}
+
+spriteset (spriteset_stn_green_x, "gfx/empty.png") {
+    [0,0,1,1,0,0]
+}
+spriteset (spriteset_stn_green_y, "gfx/empty.png") {
+    [0,0,1,1,0,0]
+}
+alternative_sprites (spriteset_stn_green_x, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
+    [1,1,64,31,-31,0]
+}
+alternative_sprites (spriteset_stn_green_y, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
+    [81,1,64,31,-31,0]
+}
+spritelayout spritelayout_stn_green_x {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite: spriteset_stn_green_x;
+        xextent: 0;
+        yextent: 0;
+        zextent: 0;
+    }
+}
+spritelayout spritelayout_stn_green_y {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite: spriteset_stn_green_y;
+        xextent: 0;
+        yextent: 0;
+        zextent: 0;
+    }
+}
+
+item (FEAT_STATIONS, stn_greenscreen) {
+    property {
+        class:          "GRSC";
+        classname:      string(STR_STN);
+        name:           string(STR_GRF_NAME);
+    }
+    graphics {
+        sprite_layouts: [spritelayout_stn_green_x, spritelayout_stn_green_y];
+        spriteset_stn_green_x;
+    }
+}
+
+spritelayout spritelayout_stn_green_alt {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite: spriteset_obj_green;
+        xextent: 0;
+        yextent: 0;
+        zextent: 0;
+    }
+}
+
+item (FEAT_STATIONS, stn_greenscreen_alt) {
+    property {
+        class:          "GRSC";
+        classname:      string(STR_STN);
+        name:           string(STR_GRF_NAME);
+    }
+    graphics {
+        sprite_layouts: [spritelayout_stn_green_alt, spritelayout_stn_green_alt];
+        spriteset_stn_green_x;
+    }
+}
+
+spritelayout spritelayout_stn_blue_alt {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite: spriteset_obj_blue;
+        xextent: 0;
+        yextent: 0;
+        zextent: 0;
+    }
+}
+
+item (FEAT_STATIONS, stn_bluescreen_alt) {
+    property {
+        class:          "GRSC";
+        classname:      string(STR_STN);
+        name:           string(STR_BLUE);
+    }
+    graphics {
+        sprite_layouts: [spritelayout_stn_blue_alt, spritelayout_stn_blue_alt];
+        spriteset_obj_blue;
+    }
+}

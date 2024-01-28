@@ -1,0 +1,7 @@
+##grflangid 0x01
+
+STR_GRF_NAME            :{GREEN}Greenscreen {VERSION}
+STR_GRF_DESC            :{GREEN}Greenscreen made by WenSim
+STR_BLUE                :{BLUE}Bluescreen
+STR_STN                 :{GREEN}Traversable Greenscreen
+STR_URL                 :{WEBSITE}
