@@ -1,2 +1,2 @@
-VERSION  :v0.1
+VERSION  :v0.1.1
 WEBSITE  :https://www.github.com/WenSimEHRP/Greenscreen

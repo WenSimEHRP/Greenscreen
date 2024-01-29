@@ -2,10 +2,15 @@ grf {
     grfid: "GREN";
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC);
-    version: 1; //first version
+    version: 11;
     min_compatible_version: 1;
     url: string(STR_URL);
 }
+
+if (ttd_platform != PLATFORM_OPENTTD || openttd_version < version_openttd(14,0)) {
+	error(FATAL, string(STR_OPENTTD));
+	exit;
+} // version check isn't working for some reason, STRANGE!!!
 
 template template_tracks(a) {
     [1,1,64,31,0,0]

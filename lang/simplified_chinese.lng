@@ -1,6 +1,7 @@
 ##grflangid 0x56
 
-STR_GRF_NAME            :{GREEN}绿幕 {VERSION}
+STR_OPENTTD             :{GREEN}绿幕{WHITE}需要 OpenTTD 14 或更高版本。请检查你的游戏版本。
+STR_GRF_NAME            :{GREEN}绿幕 {VERSION}{WHITE}
 STR_GRF_DESC            :{GREEN}WenSim 创作的绿幕 GRF
 STR_BLUE                :{BLUE}蓝幕
 STR_STN                 :{GREEN}绿幕站台

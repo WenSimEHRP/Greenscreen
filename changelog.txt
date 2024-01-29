@@ -1,0 +1,10 @@
+Greenscreen Changelog
+==========================
+
+2024-01-28 v0.1.1
+---------------------
+Add: Version Check
+
+2024-01-27 v0.1
+---------------------
+Initial version of Greenscreen
