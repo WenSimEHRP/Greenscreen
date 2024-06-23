@@ -1,42 +1,4 @@
-grf {
-    grfid: "GREN";
-    name: string(STR_GRF_NAME);
-    desc: string(STR_GRF_DESC);
-    version: 20;
-    min_compatible_version: 1;
-    url: string(STR_URL);
-}
-
-if (ttd_platform != PLATFORM_OPENTTD || openttd_version < version_openttd(14,0)) {
-    error(FATAL, string(STR_OPENTTD));
-    exit;
-} // version check isn't working for some reason, STRANGE!!!
-template template_tracks(a) {
-    [1,1,64,31,0,0]
-}
-
-spriteset (spriteset_obj_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green.png") {
-    [1,1,64,31,-31,0]
-}
-
-alternative_sprites (spriteset_obj_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/green4x.png") {
-    [4,4,256,127,-123,0]
-}
-
-spriteset (spriteset_obj_blue, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/blue.png") {
-    [1,1,64,31,-31,0]
-}
-
-spriteset (spriteset_stn_green_x, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
-    [1,1,64,31,-31,0]
-}
-spriteset (spriteset_stn_green_y, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
-    [81,1,64,31,-31,0]
-}
-
-spriteset (spriteset_obj_green_stack, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green-stack.png") {
-    [1,42,64,63,-31,-32]
-}spritelayout spritelayout_obj_green {
+spritelayout spritelayout_obj_green {
     ground {
         sprite: GROUNDSPRITE_CLEARED;
     }

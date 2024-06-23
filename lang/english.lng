@@ -1,8 +1,8 @@
 ##grflangid 0x01
 
-STR_OPENTTD             :{GREEN}Greenscreen {WHITE}requires OpenTTD 14.0 or newer. Please update your game installation.
-STR_GRF_NAME            :{GREEN}Greenscreen {VERSION}{WHITE}
-STR_GRF_DESC            :{GREEN}Greenscreen made by WenSim
-STR_BLUE                :{BLUE}Bluescreen
-STR_STN                 :{GREEN}Traversable Greenscreen
+STR_OPENTTD             :{PUSH_COLOUR}{GREEN}Greenscreen{POP_COLOUR} requires OpenTTD 14.0 or newer. Please update your game installation.
+STR_GRF_NAME            :{PUSH_COLOUR}{GREEN}Greenscreen {VERSION}{POP_COLOUR}
+STR_GRF_DESC            :{PUSH_COLOUR}{GREEN}Greenscreen{POP_COLOUR} made by WenSim
+STR_BLUE                :{PUSH_COLOUR}{BLUE}Bluescreen{POP_COLOUR}
+STR_STN                 :{PUSH_COLOUR}{GREEN}Traversable Greenscreen{POP_COLOUR}
 STR_URL                 :{WEBSITE}

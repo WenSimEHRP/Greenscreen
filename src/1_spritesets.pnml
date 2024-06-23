@@ -1,0 +1,26 @@
+template template_tracks(a) {
+    [1,1,64,31,0,0]
+}
+
+spriteset (spriteset_obj_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green.png") {
+    [1,1,64,31,-31,0]
+}
+
+alternative_sprites (spriteset_obj_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/green4x.png") {
+    [4,4,256,127,-123,0]
+}
+
+spriteset (spriteset_obj_blue, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/blue.png") {
+    [1,1,64,31,-31,0]
+}
+
+spriteset (spriteset_stn_green_x, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
+    [1,1,64,31,-31,0]
+}
+spriteset (spriteset_stn_green_y, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
+    [81,1,64,31,-31,0]
+}
+
+spriteset (spriteset_obj_green_stack, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green-stack.png") {
+    [1,42,64,63,-31,-32]
+}
