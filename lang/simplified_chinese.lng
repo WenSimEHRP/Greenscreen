@@ -2,7 +2,7 @@
 
 STR_OPENTTD             :{PUSH_COLOUR}{GREEN}绿幕{POP_COLOUR}需要 OpenTTD 14.0 或更新版本。请更新你的游戏。
 STR_GRF_NAME            :{PUSH_COLOUR}{GREEN}绿幕 {VERSION}{POP_COLOUR}
-STR_GRF_DESC            :由 WenSim 创作的{PUSH_COLOUR}{GREEN}绿幕{POP_COLOUR}
+# STR_GRF_DESC            :由 WenSim 创作的{PUSH_COLOUR}{GREEN}绿幕{POP_COLOUR}
 STR_BLUE                :{PUSH_COLOUR}{BLUE}蓝幕{POP_COLOUR}
 STR_STN                 :{PUSH_COLOUR}{GREEN}绿幕站台{POP_COLOUR}
 STR_URL                 :{WEBSITE}

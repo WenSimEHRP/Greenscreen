@@ -1,8 +1,8 @@
 ##grflangid 0x01
 
-STR_OPENTTD             :{PUSH_COLOUR}{GREEN}Greenscreen{POP_COLOUR} requires OpenTTD 14.0 or newer. Please update your game installation.
+STR_OPENTTD             :{PUSH_COLOUR}{GREEN}Greenscreen{POP_COLOUR} requires OpenTTD 14.0 or later. Please update your game installation.
 STR_GRF_NAME            :{PUSH_COLOUR}{GREEN}Greenscreen {VERSION}{POP_COLOUR}
-STR_GRF_DESC            :{PUSH_COLOUR}{GREEN}Greenscreen{POP_COLOUR} made by WenSim
+STR_GRF_DESC            :{}For content creators.{}{}{PUSH_COLOUR}{GREEN}Greenscreen {VERSION}{POP_COLOUR} is a NewGRF for content creators to quickly generate a clear field to demonstrate certain subjects. Please note that it is not designed for normal gaming.{}{}{PUSH_COLOUR}{WHITE}{COPYRIGHT}WenSim 2024{POP_COLOUR}{}{}Licensed under {PUSH_COLOUR}{WHITE}WTFPL{POP_COLOUR} - Do What the fuck you want to do public license
 STR_BLUE                :{PUSH_COLOUR}{BLUE}Bluescreen{POP_COLOUR}
 STR_STN                 :{PUSH_COLOUR}{GREEN}Traversable Greenscreen{POP_COLOUR}
 STR_URL                 :{WEBSITE}
