@@ -1,0 +1,3 @@
+#include "src/header.pnml"
+#include "src/spritesets.pnml"
+#include "src/greenscreen.pnml"

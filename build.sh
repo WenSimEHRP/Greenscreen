@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-# cat all files under src directory and write to a single file
-cat src/* > greenscreen.nml
+# call gcc to preprocess the file
+gcc -E -x c greenscreen.pnml > greenscreen.nml
+
 # build grf
-nmlc -c greenscreen.nml && echo "Finish building GRF"
+nmlc -c greenscreen.nml --md5=greenscreen.md5 && echo "Finished building GRF"
