@@ -2,25 +2,55 @@ template template_tracks(a) {
     [1,1,64,31,0,0]
 }
 
-spriteset (spriteset_obj_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green.png") {
-    [1,1,64,31,-31,0]
+
+spriteset (spriteset_obj_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [0, 0, 64, 31, -31, 0, "gfx/green/1x/0.png"]
+    [0, 0, 64, 31, -31, 0, "gfx/green/1x/1.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/green/1x/2.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/green/1x/3.png"]
+    [0, 0, 64, 31, -31, 0, "gfx/green/1x/4.png"]
+    [0, 0, 64, 31, -31, 0, "gfx/green/1x/5.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/green/1x/6.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/green/1x/7.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/green/1x/8.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/green/1x/9.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/green/1x/10.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/green/1x/11.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/green/1x/12.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/green/1x/13.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/green/1x/14.png"]
+    [0, 0, 64, 47, -31, -16, "gfx/green/1x/15.png"]
+    [0, 0, 64, 15, -31, 0, "gfx/green/1x/16.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/green/1x/17.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/green/1x/18.png"]
 }
 
-alternative_sprites (spriteset_obj_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/green4x.png") {
-    [4,4,256,127,-123,0]
-}
-
-spriteset (spriteset_obj_blue, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/blue.png") {
-    [1,1,64,31,-31,0]
+spriteset (spriteset_obj_blue, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [0, 0, 64, 31, -31, 0, "gfx/blue/1x/0.png"]
+    [0, 0, 64, 31, -31, 0, "gfx/blue/1x/1.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/blue/1x/2.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/blue/1x/3.png"]
+    [0, 0, 64, 31, -31, 0, "gfx/blue/1x/4.png"]
+    [0, 0, 64, 31, -31, 0, "gfx/blue/1x/5.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/blue/1x/6.png"]
+    [0, 0, 64, 23, -31, 0, "gfx/blue/1x/7.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/blue/1x/8.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/blue/1x/9.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/blue/1x/10.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/blue/1x/11.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/blue/1x/12.png"]
+    [0, 0, 64, 39, -31, -8, "gfx/blue/1x/13.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/blue/1x/14.png"]
+    [0, 0, 64, 47, -31, -16, "gfx/blue/1x/15.png"]
+    [0, 0, 64, 15, -31, 0, "gfx/blue/1x/16.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/blue/1x/17.png"]
+    [0, 0, 64, 31, -31, -8, "gfx/blue/1x/18.png"]
 }
 
 spriteset (spriteset_stn_green_x, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
     [1,1,64,31,-31,0]
 }
+
 spriteset (spriteset_stn_green_y, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/greenstn.png") {
     [81,1,64,31,-31,0]
-}
-
-spriteset (spriteset_obj_green_stack, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/green-stack.png") {
-    [1,42,64,63,-31,-32]
 }

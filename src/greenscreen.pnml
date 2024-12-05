@@ -1,12 +1,6 @@
 spritelayout spritelayout_obj_green {
     ground {
-        sprite: GROUNDSPRITE_CLEARED;
-    }
-    building {
-        sprite: spriteset_obj_green;
-        xextent: 16;
-        yextent: 16;
-        zextent: 0;
+        sprite: spriteset_obj_green(slope_to_sprite_offset(nearby_tile_slope(0,0)));
     }
 }
 
@@ -14,67 +8,27 @@ item (FEAT_OBJECTS, obj_greenscreen) {
     property {
         class:                  "GRSC";
         classname:              string(STR_GRF_NAME);
-        name:                   string(STR_GRF_NAME);
+        name:                   string(STR_GREEN);
         climates_available:     ALL_CLIMATES;
         size:                   [1,1];
         build_cost_multiplier:  0;
         remove_cost_multiplier: 0;
         introduction_date:      date(0,1,1);
         end_of_life_date:       0xFFFFFFFF;
-        object_flags:           bitmask();
         height:                 0;
         num_views:              1;
-        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE);
-        //OBJ_FLAG_NO_FOUNDATIONS
+        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE,OBJ_FLAG_NO_FOUNDATIONS);
     }
     graphics {
         default:                spritelayout_obj_green;
-    }
-}
-
-spritelayout spritelayout_obj_green_stack {
-    ground {
-        sprite: GROUNDSPRITE_CLEARED;
-    }
-    building {
-        sprite: spriteset_obj_green_stack;
-        xextent: 16;
-        yextent: 16;
-        zextent: 32;
-    }
-}
-
-item (FEAT_OBJECTS, obj_greenscreen_stack) {
-    property {
-        class:                  "GRSC";
-        classname:              string(STR_GRF_NAME);
-        name:                   string(STR_GRF_NAME);
-        climates_available:     ALL_CLIMATES;
-        size:                   [1,1];
-        build_cost_multiplier:  0;
-        remove_cost_multiplier: 0;
-        introduction_date:      date(0,1,1);
-        end_of_life_date:       0xFFFFFFFF;
-        object_flags:           bitmask();
-        height:                 0;
-        num_views:              1;
-        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE);
-        //OBJ_FLAG_NO_FOUNDATIONS
-    }
-    graphics {
-        default:                spritelayout_obj_green_stack;
+        autoslope:              CB_RESULT_AUTOSLOPE;
+        tile_check:             CB_RESULT_LOCATION_ALLOW;
     }
 }
 
 spritelayout spritelayout_obj_blue {
     ground {
-        sprite: GROUNDSPRITE_CLEARED;
-    }
-    building {
-        sprite: spriteset_obj_blue;
-        xextent: 16;
-        yextent: 16;
-        zextent: 0;
+        sprite: spriteset_obj_blue(slope_to_sprite_offset(nearby_tile_slope(0,0)));
     }
 }
 
@@ -89,14 +43,14 @@ item (FEAT_OBJECTS, obj_bluescreen) {
         remove_cost_multiplier: 0;
         introduction_date:      date(0,1,1);
         end_of_life_date:       0xFFFFFFFF;
-        object_flags:           bitmask();
         height:                 0;
         num_views:              1;
-        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE);
-        //OBJ_FLAG_NO_FOUNDATIONS
+        object_flags:           bitmask(OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME, OBJ_FLAG_ALLOW_BRIDGE,OBJ_FLAG_NO_FOUNDATIONS);
     }
     graphics {
         default:                spritelayout_obj_blue;
+        autoslope:              CB_RESULT_AUTOSLOPE;
+        tile_check:             CB_RESULT_LOCATION_ALLOW;
     }
 }
 
@@ -127,7 +81,7 @@ item (FEAT_STATIONS, stn_greenscreen) {
     property {
         class:          "GRSC";
         classname:      string(STR_STN);
-        name:           string(STR_GRF_NAME);
+        name:           string(STR_GREEN);
     }
     graphics {
         sprite_layouts: [spritelayout_stn_green_x, spritelayout_stn_green_y];
@@ -137,13 +91,7 @@ item (FEAT_STATIONS, stn_greenscreen) {
 
 spritelayout spritelayout_stn_green_alt {
     ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite: spriteset_obj_green;
-        xextent: 16;
-        yextent: 16;
-        zextent: 0;
+        sprite: spriteset_obj_green(0);
     }
 }
 
@@ -151,7 +99,7 @@ item (FEAT_STATIONS, stn_greenscreen_alt) {
     property {
         class:          "GRSC";
         classname:      string(STR_STN);
-        name:           string(STR_GRF_NAME);
+        name:           string(STR_GREEN);
     }
     graphics {
         sprite_layouts: [spritelayout_stn_green_alt, spritelayout_stn_green_alt];
@@ -161,20 +109,13 @@ item (FEAT_STATIONS, stn_greenscreen_alt) {
 
 spritelayout spritelayout_stn_blue_alt {
     ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite: spriteset_obj_blue;
-        xextent: 16;
-        yextent: 16;
-        zextent: 0;
+        sprite: spriteset_obj_blue(0);
     }
 }
 
 item (FEAT_STATIONS, stn_bluescreen_alt) {
     property {
         class:          "GRSC";
-        classname:      string(STR_STN);
         name:           string(STR_BLUE);
     }
     graphics {
